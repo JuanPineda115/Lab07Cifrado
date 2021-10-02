@@ -1,5 +1,7 @@
 import random
 
+
+
 #Euclides
 def euclides(a, b):
     if a == 0 :
@@ -69,6 +71,21 @@ def fermat_test(n, k):
             return False
     return True
 
+def randomNumeros(n, k):
+    cont = 0
+    while True:
+      range_start = 10**(n-1)
+      range_end = (10**n)-1
+      valor = randint(range_start, range_end)
+      if isPrime(valor, k):
+        print("Es primo")
+        print(valor)
+        cont +=1
+      else:
+        pass
+      if cont == k:
+        break  
+
 
 
 menuFlag = True
@@ -112,7 +129,10 @@ while menuFlag:
         print("9203: ", fermat_test(9203, 5))
         
     if option == '4':
-        menuFlag = False
+         n = int(input("Ingrese la longitud de los numeros primos a generar: "))
+         k = int(input ("Ingrese el numero k de primos a generar "))
+         fermat.randomNumeros(n,k)
+
        
     if option == '5':
         menuFlag = False
