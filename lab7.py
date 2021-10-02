@@ -78,7 +78,7 @@ def randomNumeros(n, k):
       range_end = (10**n)-1
       valor = randint(range_start, range_end)
       if isPrime(valor, k):
-        print("Es primo")
+        print("primo")
         print(valor)
         cont +=1
       else:
